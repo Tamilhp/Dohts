@@ -1,0 +1,28 @@
+[project]
+name = "dohts"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Your Name",email = "you@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "langchain-community (>=0.3.19,<0.4.0)",
+    "pypdf (>=5.4.0,<6.0.0)",
+    "typer (>=0.15.2,<0.16.0)",
+    "unstructured (>=0.17.0,<0.18.0)",
+    "pi-heif (>=0.22.0,<0.23.0)",
+    "langchain-text-splitters (>=0.3.6,<0.4.0)",
+    "langgraph (>=0.3.14,<0.4.0)"
+]
+
+[tool.poetry]
+packages = [{include = "dohts", from = "src"}]
+
+[tool.poetry.scripts]
+run_dohts = "dohts.run_pipeline:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
